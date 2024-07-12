@@ -1,8 +1,8 @@
-# Quick Guide for flutter-webOS
+# Quick Guide for building a flutter-webOS app
 
 Follow the procedure below to build your flutter app into a flutter-webOS app.
 
-## Confiture the development environment 
+## Configure the development environment 
 
 
 ### 1. Update Linux utilities
@@ -20,6 +20,8 @@ $ sudo apt-get install curl unzip cmake pkg-config file libgtk-3-0 libgtk-3-dev 
 >- Ubuntu 22.04.3 LTS (Jammy Jellyfish) 64-bit
 
 ### 2. Check the git version
+
+The version should be 2.23 or higher.
 
 ``` shell
 $ git --version
@@ -49,9 +51,9 @@ Port 29448
 
 ## Install flutter
 
-Install flutter **3.13.9**, which is the same version supported by flutter-webOS, although the latest version of flutter supported is 3.22.2, here you 
+Install flutter **3.13.9**, which is the version supported by flutter-webOS, although the latest version of flutter supported is 3.22.2. 
 
-You MUST install the same-version flutter (3.13.9) as flutter-webOS. 
+You **MUST** install the same-version flutter (3.13.9) as flutter-webOS. 
 
 ``` shell
 $ git clone https://github.com/flutter/flutter.git
@@ -93,7 +95,7 @@ $ . /home/worker/starfish-bdk-x86_64/environment-setup-ca9v1-starfishmllib32-lin
 export WEBOS_FLUTTER_NDK_ENV="${HOME}/starfish-bdk-x86_64/environment-setup-ca9v1-starfishmllib32-linux-gnueabi"
 ```
 
-### 2. Install flutter-webOS
+### 2. Install flutter-webOS SDK
 
 ``` shell
 $ git clone TBD(ssh://wall.lge.com:29448/module/flutter-webos 와 같은 flutter-webos cli private github로 변경필요)
@@ -110,7 +112,7 @@ flutter-webos$ flutter-webos precache -f
 
 ### 1. Add `PATH` to `.bashrc`
 
-> [!Important]
+> [!Caution]
 > Restart the terminal before executing the following commands.
 
 ``` shell
@@ -138,7 +140,7 @@ fi
 export WEBOS_ENGINE_BASE_URL="TBD(https://cart.lge.com/artifactory/flutter-webos/releases에 대응되는 주소)"
 ```
 
-### 2. Verify if the flutter and flutter-webOS have the same version
+### 2. Verify that the flutter and flutter-webOS have the same version
 
 ``` shell
 // check the version of flutter: 3.13.9
@@ -209,8 +211,8 @@ $ flutter-webos create --platforms webos helloworld
   |-------------------|----------------------------------------------------------------------------|
   | webOS             | flutter-webos create --platforms webos helloworld                          |
   | webOS and Linux   | flutter-webos create --platforms webos,linux helloworld                    |
-
-- Or you can also create a project for webOS and add Linux, or vice versa.
+  
+  Or you can also create a project for webOS first and add Linux, or vice versa.
 
   ``` shell
   $ flutter-webos create --platforms webos helloworld
@@ -224,12 +226,14 @@ $ flutter-webos create --platforms webos helloworld
   $ flutter-webos create --platforms webos
   ```
 
-In addition, you can check the GUI on the Linux descktop target using the `run` command.
+  Refer to [Add desktop support to an existing Flutter app](https://docs.flutter.dev/platform-integration/desktop#add-desktop-support-to-an-existing-flutter-app).
 
-``` shell
-$ cd helloworld
-$ flutter run -d linux
-```
+- In addition, you can check the GUI on the Linux descktop target using the `run` command.
+
+  ``` shell
+  $ cd helloworld
+  $ flutter run -d linux
+  ```
 
 ## Build and package the flutter-webOS app 
 
@@ -308,7 +312,7 @@ Successfully added custom device to config file at "/home/worker/.config/flutter
   $ flutter-webos custom-devices delete -d tv
   ```
 
-- Verify the device is successfully added.
+- Verify if the device is successfully added.
 
   ```shell
   // run it on your app project directory.
