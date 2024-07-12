@@ -2,12 +2,6 @@
 
 Follow the procedure below to build your flutter app into a flutter-webOS app.
 
-> [!IMPORTANT]
->
-> If @webosose/ares-cli is installed globally, uninstall it before install globally @webos-tools/cli.
-
-- [Compatibility of webOS OSE CLI](https://www.webosose.org/docs/tools/sdk/cli/cli-release-notes/#compatibility)
-
 ## Confiture the development environment 
 
 
