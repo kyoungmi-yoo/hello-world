@@ -2,7 +2,7 @@
 
 Follow the procedure below to build your flutter app into a flutter-webOS app.
 
-## Configure the development environment 
+## Set up the development environment
 
 
 ### 1. Update Linux utilities
@@ -357,7 +357,7 @@ The Flutter DevTools debugger and profiler on webOS is available at: http://127.
 
 ## How to build an app with flutter-webOS plugins
 
-If you used flutter-webOS plulgins in your app, you need to configure the package dependencies in the `pubspec.yaml` under the app source folder. 
+If you used flutter-webOS plulgins in your app, you need to specify the package dependencies in the `pubspec.yaml` under the app source folder. 
 
 Refer to [Package dependencies](https://dart.dev/tools/pub/dependencies).
 
