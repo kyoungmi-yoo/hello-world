@@ -262,7 +262,7 @@ helloworld$ flutter-webos build webos --ipk
 
 ## Configure the flutter-webOS device settings
 
-### Prerequisite
+### 1. Prerequisite
 
 - Check your `appinfo.json`.
 
@@ -279,7 +279,7 @@ helloworld$ flutter-webos build webos --ipk
     $ sync && reboot -f
     ```
 
-### Add your webOS TV device as a custom device
+### 2. Add your webOS TV device as a custom device
 
 Make sure that the device is reachable via SSH.
 
