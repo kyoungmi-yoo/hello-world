@@ -159,8 +159,9 @@ Tools • Dart 3.1.5 • DevTools 2.25.0
 Tools • flutter-webos revision d070e14
 ```
 
-### 3. Check the information about the installed tools using the `doctor` option
+### 3. Check the information about the installed tools
 
+Check the information about the installed tools using the `doctor` option
 
 ``` shell
 // check information about the installed tools
@@ -255,7 +256,7 @@ helloworld$ flutter-webos build webos --ipk
 
     (e.g. `build/webos/arm/release/ipk`, `build/webos/arm/debug/ipk`)
 
-- If you used flutter-webOS plugins in your app, see [How to build an app with flutter-webOS plugins](#how-to-build-an-app-with-flutter-webos-plugins).
+- If you used flutter-webOS plugins in your app, you need to set package dependencies. See [How to build an app with flutter-webOS plugins](#how-to-build-an-app-with-flutter-webos-plugins).
 
 - If you want to change the app id of the ipk to be generated, change `id` in the `appinfo.json` file before making the ipk. The `appinfo.json` file is located in `webos/meta/appinfo.json` under the project directory.
 
@@ -263,14 +264,14 @@ helloworld$ flutter-webos build webos --ipk
 
 ### Prerequisite
 
-- Check your `appinfo.json`
+- Check your `appinfo.json`.
 
     1. The app `id` should not start with `com.webos` or `com.lge`.
     2. The value of `trustLevel` cannot be `trusted`.
 
     Note that this is required to install the app in Developer Mode and is not a restriction on normal flutter apps.
 
-- Enable the dev mode of your target device
+- Enable the dev mode of your target device.
 
     ``` shell
     $ touch /var/luna/preferences/devmode_enabled
@@ -324,8 +325,9 @@ Successfully added custom device to config file at "/home/worker/.config/flutter
   webOS (mobile)  • tv          • flutter-tester • tc18-2023.01-12
   ```
 
-## Install and run the flutter-webOS app using the `run` command
+## Install and run the flutter-webOS app
 
+Install and run the flutter-webOS app using the `run` command
 
 ```shell
 $ cd helloworld
@@ -355,8 +357,9 @@ The Flutter DevTools debugger and profiler on webOS is available at: http://127.
 
 ## How to build an app with flutter-webOS plugins
 
-If you used flutter-webOS plulgins in your app, you need to add the plugin information into the package dependencies in the `pubspec.yaml` under the app source folder. 
-Refer to [Package dependencies](https://dart.dev/tools/pub/dependencies) for more information.
+If you used flutter-webOS plulgins in your app, you need to configure the package dependencies in the `pubspec.yaml` under the app source folder. 
+
+Refer to [Package dependencies](https://dart.dev/tools/pub/dependencies).
 
 The following example is when using the `webos_logger` flutter-webOS plugin. 
 
