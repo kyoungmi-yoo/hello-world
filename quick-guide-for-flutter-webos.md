@@ -14,7 +14,7 @@ $ sudo apt-get update
 $ sudo apt-get install curl unzip cmake pkg-config file libgtk-3-0 libgtk-3-dev git ninja-build clang -y
 ```
 
-> [Note]
+> [!Note]
 > This is tested on the 64-bit version of Ubuntu Long Term Support (LTS) releases, including:
 >- Ubuntu 18.04.6 LTS (Bionic Beaver) 64-bit
 >- Ubuntu 22.04.3 LTS (Jammy Jellyfish) 64-bit
