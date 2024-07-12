@@ -110,7 +110,7 @@ flutter-webos$ flutter-webos precache -f
 
 ## Configure the flutter and flutter-webOS settings
 
-### 1. Add `PATH` to ` .bashrc`
+### 1. Add `PATH` to `.bashrc`
 
 > [!Important]
 > Restart the terminal before executing the following.
@@ -189,8 +189,12 @@ Doctor summary (to see all details, run flutter doctor -v):
 ...
 ```
 
-- If Chrome is not installed, install the Linux version of [Google Chrome](https://www.google.com/chrome/dr/download/) to use **DevTool**. Refer to [Start building Flutter web apps on Linux](https://docs.flutter.dev/get-started/install/linux/web).
-- If the Linux toolchain is not installed, install the Linux toolchain to use Linux descktop target build. Refer to [Start building Flutter native desktop apps on Linux](https://docs.flutter.dev/get-started/install/linux/desktop).
+- If Chrome is not installed, install the Linux version of [Google Chrome](https://www.google.com/chrome/dr/download/) to use **DevTool**. 
+
+  Refer to [Start building Flutter web apps on Linux](https://docs.flutter.dev/get-started/install/linux/web).
+- If the Linux toolchain is not installed, install the Linux toolchain to use Linux descktop target build. 
+
+  Refer to [Start building Flutter native desktop apps on Linux](https://docs.flutter.dev/get-started/install/linux/desktop).
 
 
 ## Create a flutter-webOS project
@@ -256,7 +260,7 @@ helloworld$ flutter-webos build webos --ipk
 
 ### Prerequisite
 
-- Check your `appinfo.json'
+- Check your `appinfo.json`
 
     Note that this is required to install the app in Developer Mode and is not a restriction on normal flutter apps.
 
