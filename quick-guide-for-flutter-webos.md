@@ -15,7 +15,7 @@ $ sudo apt-get install curl unzip cmake pkg-config file libgtk-3-0 libgtk-3-dev 
 ```
 
 > [!Note]
-> This is tested on the 64-bit version of Ubuntu Long Term Support (LTS) releases, including:
+> This is tested on the 64-bit version noteof Ubuntu Long Term Support (LTS) releases, including:
 >- Ubuntu 18.04.6 LTS (Bionic Beaver) 64-bit
 >- Ubuntu 22.04.3 LTS (Jammy Jellyfish) 64-bit
 
@@ -49,9 +49,9 @@ Port 29448
 
 ## Install flutter
 
-Although the latest version of flutter supported is 3.22.2, here you install flutter **3.13.9**, which is the same version supported by flutter-webOS.
+Install flutter **3.13.9**, which is the same version supported by flutter-webOS, although the latest version of flutter supported is 3.22.2, here you 
 
-You MUST install the same-version flutter (3.13.9), as flutter-webOS. 
+You MUST install the same-version flutter (3.13.9) as flutter-webOS. 
 
 ``` shell
 $ git clone https://github.com/flutter/flutter.git
@@ -69,9 +69,7 @@ flutter$ flutter precache -f
 
 ## Install flutter-webOS
 
-### 1. Install webOS NDK
-
-Download and instalkl webOS NDK.
+### 1. Download and install webOS NDK
 
 ``` shell
 // download webOS NDK
@@ -113,7 +111,7 @@ flutter-webos$ flutter-webos precache -f
 ### 1. Add `PATH` to `.bashrc`
 
 > [!Important]
-> Restart the terminal before executing the following.
+> Restart the terminal before executing the following commands.
 
 ``` shell
 
@@ -203,27 +201,28 @@ Doctor summary (to see all details, run flutter doctor -v):
 $ flutter-webos create --platforms webos helloworld
 ```
 
-If you want to check the GUI on other platforms, add them next to `--platforms webos` using comma (,) as a delimiter.
-See the example below.
+- If you want to check the GUI on other platforms, add them next to `--platforms webos` using comma (,) as a delimiter.
 
-| Platform          | Command                                                                    |
-|-------------------|----------------------------------------------------------------------------|
-| webOS             | flutter-webos create --platforms webos helloworld                          |
-| webOS and Linux   | flutter-webos create --platforms webos,linux helloworld                    |
+  See the example below.
 
-Or you can also create a project for webOS and add Linux, or vice versa.
+  | Platform          | Command                                                                    |
+  |-------------------|----------------------------------------------------------------------------|
+  | webOS             | flutter-webos create --platforms webos helloworld                          |
+  | webOS and Linux   | flutter-webos create --platforms webos,linux helloworld                    |
 
-``` shell
-$ flutter-webos create --platforms webos helloworld
-$ cd helloworld
-$ flutter-webos create --platforms linux
-```
+- Or you can also create a project for webOS and add Linux, or vice versa.
 
-``` shell
-$ flutter-webos create --platforms linux helloworld
-$ cd helloworld
-$ flutter-webos create --platforms webos
-```
+  ``` shell
+  $ flutter-webos create --platforms webos helloworld
+  $ cd helloworld
+  $ flutter-webos create --platforms linux
+  ```
+
+  ``` shell
+  $ flutter-webos create --platforms linux helloworld
+  $ cd helloworld
+  $ flutter-webos create --platforms webos
+  ```
 
 In addition, you can check the GUI on the Linux descktop target using the `run` command.
 
@@ -254,7 +253,7 @@ helloworld$ flutter-webos build webos --ipk
 
 - If you used flutter-webOS plugins in your app, see [How to build an app with flutter-webOS plugins](#how-to-build-an-app-with-flutter-webos-plugins).
 
-- If you want to change the app id of the ipk to be generated, change `id` in the `appinfo.json` file before packaging the ipk. The `appinfo.json` file is located in `webos/meta/appinfo.json` under the project directory.
+- If you want to change the app id of the ipk to be generated, change `id` in the `appinfo.json` file before making the ipk. The `appinfo.json` file is located in `webos/meta/appinfo.json` under the project directory.
 
 ## Configure the flutter-webOS device settings
 
@@ -262,12 +261,12 @@ helloworld$ flutter-webos build webos --ipk
 
 - Check your `appinfo.json`
 
-    Note that this is required to install the app in Developer Mode and is not a restriction on normal flutter apps.
-
     1. The app `id` should not start with `com.webos` or `com.lge`.
     2. The value of `trustLevel` cannot be `trusted`.
 
-- Change your target device into dev mode
+    Note that this is required to install the app in Developer Mode and is not a restriction on normal flutter apps.
+
+- Enable the dev mode of your target device
 
     ``` shell
     $ touch /var/luna/preferences/devmode_enabled
@@ -299,31 +298,30 @@ Would you like to add the custom device to the config now? [Y/n] (empty for defa
 Successfully added custom device to config file at "/home/worker/.config/flutter/custom_devices.json".
 ```
 
-To delete the added device from the config file, execute the following:
+- To delete the added device from the config file, execute the following:
 
-```shell
-$ flutter-webos custom-devices reset
-```
-or
-```shell
-$ flutter-webos custom-devices delete -d tv
-```
+  ```shell
+  $ flutter-webos custom-devices reset
+  ```
+  or
+  ```shell
+  $ flutter-webos custom-devices delete -d tv
+  ```
 
-Verify the device is successfully added.
+- Verify the device is successfully added.
 
-```shell
-# Run it on your app project directory.
-$ flutter-webos devices
-3 connected devices:
+  ```shell
+  // run it on your app project directory.
+  $ flutter-webos devices
+  3 connected devices:  
  
-Linux (desktop) • linux       • linux-x64      • Ubuntu 18.04.6 LTS 5.15.0-60-generic
-Chrome (web)    • chrome      • web-javascript • Google Chrome 126.0.6478.126
-webOS (mobile)  • tv          • flutter-tester • tc18-2023.01-12
-```
+  Linux (desktop) • linux       • linux-x64      • Ubuntu 18.04.6 LTS 5.15.0-60-generic
+  Chrome (web)    • chrome      • web-javascript • Google Chrome 126.0.6478.126
+  webOS (mobile)  • tv          • flutter-tester • tc18-2023.01-12
+  ```
 
-## Run the flutter-webOS app
+## Install and run the flutter-webOS app using the `run` command
 
-Install and run the app (ipk) using the `run` command.
 
 ```shell
 $ cd helloworld
